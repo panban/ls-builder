@@ -12,11 +12,7 @@ var $ = {
   gulp: require('gulp'),
   rimraf: require('rimraf'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')({
-    rename: {
-      'gulp-replace-task': 'replace'
-    }
-  })
+  gp: require('gulp-load-plugins')()
 };
 
 $.path.task.forEach(function(taskPath) {
