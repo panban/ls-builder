@@ -1,13 +1,13 @@
 'use strict';
 
-var $ = {
+global.$ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
   path: {
-    task: require('./gulp/path.tasks'),
-    template: require('./gulp/path.template'),
-    foundation: require('./gulp/path.foundation'),
-    app: require('./gulp/path.app')
+    task: require('./gulp/paths/tasks.js'),
+    template: require('./gulp/paths/template.js'),
+    foundation: require('./gulp/paths/foundation.js'),
+    app: require('./gulp/paths/app.js')
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
@@ -16,7 +16,7 @@ var $ = {
 };
 
 $.path.task.forEach(function(taskPath) {
-  require(taskPath)($);
+  require(taskPath)();
 });
 
 $.gulp.task('default', $.gulp.series(

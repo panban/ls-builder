@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function($) {
+module.exports = function() {
   $.gulp.task('sass', function() {
     return $.gulp.src('./source/style/app.scss')
       .pipe($.gp.sourcemaps.init())
