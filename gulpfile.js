@@ -7,6 +7,7 @@ global.$ = {
     task: require('./gulp/paths/tasks.js'),
     template: require('./gulp/paths/template.js'),
     foundation: require('./gulp/paths/foundation.js'),
+    vendor: require('./gulp/paths/vendor.js'),
     app: require('./gulp/paths/app.js')
   },
   gulp: require('gulp'),
@@ -26,7 +27,8 @@ $.gulp.task('default', $.gulp.series(
     'jade',
     'js.foundation',
     'js.process',
-    'copy.image'
+    'copy.image',
+    'css.vendor'
   ),
   $.gulp.parallel(
     'watch',
