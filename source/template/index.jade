@@ -6,6 +6,59 @@ html
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
 
-    .greating
-      .greating_text Hello! I'm your training builder.
-      .greating_picture
+    .background
+      img(src='assets/img/night_no_bg.jpg' alt='background' width="1920px" height="1080px")
+    .container
+      .login
+        a(href="/") Авторизоваться
+      .user-card
+        .block-info
+          .info-photo
+            img(src='assets/img/avatar.jpg' alt='my photo')
+          .info-description
+            p.name
+              Щеклеин Дмитрий
+            p.descr
+              Личный сайт веб разработчика
+          ul.info-social
+            li.social-list
+              a.social-link
+            li.social-list
+              a.social-link
+            li.social-list
+              a.social-link
+          ul.info-footer-nav
+            li.info-nav-list
+              a(href='/') Мои работы
+            li.info-nav-list
+              a(href='/') Обо мне
+            li.info-nav-list
+              a(href='/') Блог
+        .user-authorize
+          .authorize
+            h1 Авторизуйтесь
+          .authorize-form
+            .form-body
+              .body-wrap
+                input(type='text' class='input' placeholder='Логин')
+              .body-wrap
+                input(type='password' class='input' placeholder='Пароль')
+              .human-test
+                input(type='checkbox' id='human')
+                label(for='human') Я человек
+              .robot-test
+                .text
+                  Вы точно не робот?
+                input(type='radio' id='yes'  value='yes')
+                label(for='yes' class='radiobtn') Да
+                input(type='radio' id='no' value='no')
+                label(for='no' class='radiobtn') Не уверен
+
+          ul.autorize-footer-btn
+            li.autorize-nav-list
+              a(href='/') На главную
+            li.autorize-nav-list
+              a(href='/') Войти
+      .copy
+        span.copyright © Дмитрий Щеклеин | создано с любовью в LoftSchool | 2016
+        script
