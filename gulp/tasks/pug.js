@@ -6,7 +6,7 @@ module.exports = function() {
       .pipe($.gp.pug({ pretty: true }))
       .on('error', $.gp.notify.onError(function(error) {
         return {
-          title: 'Jade',
+          title: 'Pug',
           message:  error.message
         }
        }))
